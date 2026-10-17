@@ -1,0 +1,151 @@
+{
+  "title": "物理实验室",
+  "theme": "midnight-laboratory",
+  "lessons": [
+    {
+      "id": "lens",
+      "title": "凸透镜成像",
+      "discipline": "光学实验室",
+      "subtitle": "在光路交汇处，发现成像规律",
+      "sourceId": "611cd15f-d353-4993-9ca2-31e77ceac5e3",
+      "model": "理想薄透镜 · 近轴光线",
+      "question": "物体位置改变时，像的性质和位置怎样改变？",
+      "modelKind": "analytic",
+      "inputs": [
+        "u/cm",
+        "f/cm",
+        "screen/cm"
+      ],
+      "checks": [
+        "五种典型物距",
+        "光屏失焦与自动对焦",
+        "焦点奇异状态",
+        "虚像不能承接"
+      ]
+    },
+    {
+      "id": "mirror",
+      "title": "平面镜成像规律",
+      "discipline": "光学实验室",
+      "subtitle": "从镜中观察，到对称测量与虚像检验",
+      "sourceId": "263eef83-a6eb-4a9e-beb9-fd7f2bb90f75",
+      "sourceTitle": "平面镜成像规律（3D版）",
+      "model": "理想平面镜 · 正立等大虚像",
+      "question": "像在镜面上，还是在镜后？为什么光屏接不到它？",
+      "modelKind": "analytic-plane-reflection",
+      "inputs": [
+        "物距/cm",
+        "物高/cm",
+        "沿镜面位置/cm",
+        "光屏距/cm"
+      ],
+      "checks": [
+        "等大等距与平面对称",
+        "反射定律与三维反向延长线",
+        "横向移动不改变像高",
+        "光点不进入镜后",
+        "虚像不能由光屏承接"
+      ]
+    },
+    {
+      "id": "lens-exam",
+      "title": "凸透镜成像 · 考试探究",
+      "navTitle": "凸透镜考试探究",
+      "discipline": "光学实验室",
+      "subtitle": "移动仪器、检验焦面与完整成像",
+      "sourceId": "a7847458-ba24-45e0-b29b-e0d636799540",
+      "model": "理想薄透镜 · f = 10 cm · 自编情境",
+      "question": "清晰对焦以后，为什么屏上仍可能看不全像？",
+      "modelKind": "analytic-optics-bench",
+      "inputs": [
+        "objectX/cm",
+        "lensX/cm",
+        "screenX/cm",
+        "objectY/cm",
+        "screenY/cm"
+      ],
+      "checks": [
+        "移动透镜同时改变物距和屏距",
+        "焦面与屏高独立",
+        "有限口径",
+        "虚像不能在屏上成清晰像"
+      ]
+    },
+    {
+      "id": "conveyor",
+      "title": "传送带受力分析",
+      "navTitle": "传送带",
+      "discipline": "力学实验室",
+      "subtitle": "先比较相对速度，再判断摩擦方向",
+      "sourceId": "bd9d78a4-fdee-4b79-b13c-522242a1e484",
+      "sourceTitle": "传送带受力分析进阶3D版",
+      "model": "匀速传送带 · 静 / 动摩擦",
+      "question": "摩擦力方向一定与物块运动方向相反吗？",
+      "modelKind": "event-resolved-dynamics",
+      "inputs": [
+        "beltSpeed/m·s⁻¹",
+        "initialSpeed/m·s⁻¹",
+        "mu",
+        "angle/°",
+        "mass/kg"
+      ],
+      "checks": [
+        "滑动到同步的精确切换",
+        "水平同步零摩擦",
+        "倾斜同步静摩擦与容量限制",
+        "反向运行",
+        "无摩擦边界",
+        "带端事件截断"
+      ]
+    },
+    {
+      "id": "magnet",
+      "title": "空间磁场",
+      "discipline": "电磁实验室",
+      "subtitle": "六种磁场情境，从磁针方向到空间场线",
+      "sourceId": "119f545c-b79e-47d5-8d6e-7681bc7f9542",
+      "model": "规定磁化与电流回路 · 定性模型",
+      "question": "空间中不同位置的磁场方向如何判断？",
+      "modelKind": "closed-current-superposition",
+      "inputs": [
+        "probeX",
+        "probeY",
+        "probeZ",
+        "strength",
+        "gap",
+        "density/display-only",
+        "sectionHeight"
+      ],
+      "checks": [
+        "六种磁体",
+        "内部与外部方向",
+        "同名相对中心零场",
+        "极性及电流反转",
+        "场强与线数分离",
+        "2D截面与铁屑定向"
+      ]
+    },
+    {
+      "id": "lever",
+      "title": "杠杆平衡",
+      "discipline": "力学实验室",
+      "subtitle": "改变力与力臂，寻找平衡的条件",
+      "model": "静力平衡 · 无质量刚性杠杆",
+      "sourceId": "960c4aec-423e-4b91-bb29-aba112eca4b1",
+      "question": "怎样改变力或力臂，使杠杆满足平衡条件？",
+      "modelKind": "constrained-static",
+      "inputs": [
+        "leftForce/N",
+        "leftArm/cm",
+        "rightForce/N",
+        "rightArm/cm"
+      ],
+      "checks": [
+        "等臂平衡",
+        "不等臂平衡",
+        "左右合力矩方向",
+        "N·cm到N·m换算"
+      ]
+    }
+  ]
+}

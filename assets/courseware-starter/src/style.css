@@ -1,0 +1,149 @@
+@import './theme.css';
+
+*{box-sizing:border-box}html,body,#app{width:100%;height:100%;margin:0}body{font-family:var(--font-ui);background:var(--bg);color:var(--text);overflow:hidden}button,input{font:inherit}button{cursor:pointer}button:disabled{cursor:default;opacity:.4}button,a,input{outline-offset:5px}button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--blue)}button{color:inherit}svg{width:24px;height:24px;flex-shrink:0}button{touch-action:manipulation}button,input{ -webkit-tap-highlight-color:transparent}
+.laboratory{height:100dvh;min-height:0;overflow:hidden;position:relative;isolation:isolate;background:#060d17}.stage{position:fixed;inset:0;z-index:0}.stage canvas{display:block;width:100%;height:100%;touch-action:none}.stage:after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,#060d17a6,transparent 23%,transparent 70%,#050c1540)}
+.masthead{position:absolute;top:27px;left:35px;z-index:2;pointer-events:none}.series{font-size:10px;letter-spacing:2.5px;color:#8ea9c5;display:flex;align-items:center;gap:10px}.series-mark{color:var(--gold);font-size:17px;line-height:14px}.series-line{display:inline-block;width:30px;height:1px;background:#40536a}.title-row{display:flex;align-items:center;gap:21px;margin-top:13px}h1,h2,h3,p{margin:0}.title-row h1,.title-row h2{font-family:var(--font-display);font-weight:600;letter-spacing:3px;line-height:1.3}.title-row h1{font-size:35px;color:#c7dcf7}.title-row h2{font-size:31px;color:var(--gold)}.title-divider{height:31px;width:1px;background:#63768d}.masthead p{font-size:11px;letter-spacing:2px;color:#94a8bd;margin-top:10px}
+.lesson-nav{position:absolute;top:28px;right:24px;width:267px;z-index:20}
+.scene-topline{position:absolute;left:149px;top:167px;display:flex;align-items:center;gap:9px;color:#9baec3;font-size:10px;letter-spacing:1px}.live-dot{width:5px;height:5px;border-radius:50%;background:#67b5ef;box-shadow:0 0 10px #5db5ff80}.scene-topline button{border:0;background:none;padding:0;display:flex;margin-left:3px;color:#7390af}.scene-topline svg{width:15px;height:15px}
+.object-rail{width:81px;border:1px solid #27384b;border-radius:13px;background:linear-gradient(120deg,#0a1624eb,#07111dd9);padding:7px;display:flex;flex-direction:column;gap:7px}.object-rail button{display:flex;flex-direction:column;align-items:center;gap:10px;border:1px solid transparent;border-radius:9px;padding:16px 0;background:transparent;color:#93abc6;font-size:11px;position:relative}.object-rail button:not(:last-child):after{content:'';position:absolute;height:1px;background:#223346;bottom:-5px;width:45px}.object-rail svg{height:36px;width:36px;stroke-width:1.1;color:#9bc6eb}.object-rail .selected{border-color:#53bcff;background:linear-gradient(160deg,#163047,#0d1c2a);box-shadow:inset 0 0 14px #2089c70e}.object-rail .selected svg{color:var(--gold);filter:drop-shadow(0 0 7px #ffbf6060)}.object-rail .selected span{color:#e2edf8}
+.control-panel{position:absolute;right:24px;top:95px;bottom:89px;width:267px;max-height:790px;overflow:auto;padding:22px 20px 16px;background:linear-gradient(125deg,#0c1827ee,#08111eec);border:1px solid var(--border);border-radius:14px;box-shadow:0 16px 40px #0005;scrollbar-width:thin;scrollbar-color:#35485e transparent}.panel-heading{display:flex;align-items:center;justify-content:space-between;gap:5px;margin-bottom:25px}.overline{font-size:9px;letter-spacing:1.6px;color:#7c96b1}.panel-heading h3{font-size:16px;font-weight:500;letter-spacing:2px;margin-top:7px}.status-chip{font-size:9px;color:#9ec6ea;border:1px solid #2b4660;border-radius:4px;padding:5px 6px;white-space:nowrap}.parameter{margin-bottom:26px}.parameter-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:15px}.parameter-title label{font-size:13px;color:#c6d6ea}.parameter-title i{font-family:Georgia,serif;font-size:18px;color:#e0ebfa;padding-left:7px;font-weight:400}.number-group{display:flex;align-items:center;gap:7px}.number-group input{appearance:textfield;-moz-appearance:textfield;width:58px;height:30px;background:#111e2d;color:#eff6ff;border:1px solid #35495f;border-radius:5px;text-align:center;font-size:17px;font-variant-numeric:tabular-nums}.number-group input::-webkit-inner-spin-button{display:none}.number-group span{font-size:10px;color:#91b8de;min-width:16px}.parameter input[type=range]{appearance:none;display:block;width:100%;height:5px;background:linear-gradient(to right,var(--blue) var(--fill),#35445b var(--fill));border-radius:5px;cursor:pointer;margin:0}.parameter input[type=range]::-webkit-slider-thumb{appearance:none;width:15px;height:15px;background:#5caaff;border:3px solid #e6f1ff;border-radius:50%;box-shadow:0 0 11px #4d9fff6b}.parameter input[type=range]::-moz-range-thumb{width:10px;height:10px;background:#5caaff;border:3px solid #e6f1ff;border-radius:50%}.range-ticks{display:flex;justify-content:space-between;font-family:Georgia,serif;font-size:11px;color:#7f98b8;margin-top:10px}.range-ticks span:before{content:'';display:block;width:1px;height:3px;background:#6b809c;margin:0 auto 4px}
+.metrics{border-top:1px solid #28384a;padding-top:14px;margin-top:-3px}.formula{font-family:Georgia,'Microsoft YaHei',serif;text-align:center;color:#d3b784;font-size:14px;letter-spacing:.5px;margin-bottom:14px}.metric{display:flex;justify-content:space-between;align-items:center;margin:11px 0;font-size:11px;color:#91a6bf}.metric strong{font-size:14px;font-weight:400;font-variant-numeric:tabular-nums;color:#d9e6f8}.metric small{color:#7e9ab7;font-size:9px;padding-left:6px}.toggles{margin-top:16px;border-top:1px solid #28384a;padding-top:13px}.switch-row{display:flex;position:relative;align-items:center;justify-content:space-between;font-size:11px;color:#a6bad1;padding:7px 0;cursor:pointer}.switch-row input{position:absolute;right:0;opacity:0;width:30px;height:20px;margin:0}.switch{width:26px;height:14px;background:#28394d;border-radius:10px;border:1px solid #49617c;transition:.15s}.switch:after{content:'';display:block;background:#a4b9d1;width:8px;height:8px;border-radius:50%;position:relative;top:2px;left:3px;transition:.15s}.switch-row input:checked+.switch{background:#205c8a;border-color:#479bd6}.switch-row input:checked+.switch:after{left:13px;background:#d8edff}.switch-row input:focus-visible+.switch{outline:2px solid var(--blue);outline-offset:4px}.panel-actions{margin-top:19px;display:flex;flex-direction:column;gap:9px}.primary{height:47px;display:flex;align-items:center;justify-content:center;gap:10px;color:#2e1d08;background:linear-gradient(120deg,#d99435,#f6ce83 55%,#d59a42);border:1px solid #f6d69e;border-radius:11px;font-size:17px;font-weight:600;letter-spacing:2px;box-shadow:0 3px 18px #c98e252b,inset 0 1px 1px #ffe3b7}.primary:hover{filter:brightness(1.1)}.primary svg{width:19px;height:19px;fill:#4d2c07;stroke-width:1}.secondary{border:1px solid #344a62;background:#152538;color:#9cbbd9;height:32px;border-radius:6px;font-size:11px;letter-spacing:1px}.secondary:hover:enabled{background:#213b54}.model-note{font-size:9px;line-height:1.8;color:#70849c;margin-top:15px}
+.preset-bar{display:flex;flex-direction:column;gap:8px}.preset-bar .overline{letter-spacing:2px;color:#8096af}.preset-bar #presets{display:flex;gap:6px;flex-wrap:wrap}.preset-bar button{font:12px Georgia,'Microsoft YaHei',serif;padding:7px 12px;border:1px solid #34475d;background:#0a1422b8;color:#9db3cc;border-radius:5px;backdrop-filter:blur(10px)}.preset-bar button:hover,.preset-bar button.selected{border-color:#b58b4f;background:#3e3121c9;color:#f9d596}
+.observation{position:absolute;bottom:56px;left:calc((100% - 284px)/2);transform:translateX(-50%);width:430px;text-align:center;border:1px solid #39516d;border-radius:13px;background:linear-gradient(120deg,#0c1928e6,#091320ed);padding:24px 20px 16px;backdrop-filter:blur(12px);box-shadow:0 10px 30px #0003}.observation-tab{position:absolute;top:-13px;left:50%;transform:translateX(-50%);padding:4px 26px;border:1px solid #344f70;border-radius:20px;background:#0a1626;color:#b7d1f0;font-family:var(--font-display);font-size:14px;letter-spacing:4px;white-space:nowrap}.observation h3{font-family:var(--font-display);font-size:23px;font-weight:600;color:var(--gold);letter-spacing:3px;line-height:1.4}.observation p{font-size:10px;line-height:1.7;color:#8da4bf;margin-top:7px}.scene-footer{position:absolute;left:34px;bottom:17px;font-size:9px;color:#7990ab;display:flex;gap:24px}.scene-footer span:last-child{opacity:.65}.loading,.error-state{position:absolute;top:45%;left:50%;transform:translate(-50%,-50%);color:#a7bed7;font-size:14px;text-align:center;line-height:2}.error-state h2{color:#f3c982}
+dialog{width:min(560px,90vw);border:1px solid #425b77;border-radius:15px;background:#101d2c;color:#bfd1e7;padding:34px;box-shadow:0 25px 80px #0008}dialog::backdrop{background:#0009;backdrop-filter:blur(5px)}dialog h2{font-size:22px;font-family:var(--font-display);color:var(--gold);margin:12px 0 24px}dialog h3{font-size:14px;color:#dbe9fa;margin:22px 0 10px}dialog p{font-size:12px;line-height:1.9;margin:10px 0;color:#a0b5cc}dialog a{color:#7ac3ff}dialog .fineprint{font-size:10px;color:#7189a3}.close-guide{position:absolute;right:14px;top:10px;font-size:28px;color:#9bb2cb;background:none;border:0}
+@media(min-width:1650px){.control-panel{width:300px;right:32px;padding:27px 25px}.masthead{left:45px;top:36px}.title-row h1{font-size:42px}.title-row h2{font-size:37px}.parameter{margin-bottom:36px}.observation{width:490px;bottom:65px}.observation h3{font-size:27px}.scene-topline{top:190px}.lesson-nav{right:32px;top:35px}}
+@media(max-height:800px) and (min-width:1001px){.control-panel{top:87px;bottom:85px;padding:16px}.panel-heading{margin-bottom:16px}.parameter{margin-bottom:18px}.parameter-title{margin-bottom:12px}.model-note{font-size:8px;margin-top:8px}.toggles{margin-top:9px;padding-top:8px}.metrics{padding-top:10px}.metric{margin:8px 0}.panel-actions{margin-top:12px}.masthead{top:20px}.title-row h1{font-size:29px}.title-row h2{font-size:27px}.scene-topline{top:142px}.lesson-nav{top:20px}.observation{width:420px;bottom:52px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+.laboratory[data-lesson=lever] #parameters,.laboratory[data-lesson=magnet] #parameters{display:grid;grid-template-columns:1fr 1fr;column-gap:14px}.laboratory[data-lesson=lever] .parameter-title,.laboratory[data-lesson=magnet] .parameter-title{flex-wrap:wrap;gap:7px}.laboratory[data-lesson=lever] .number-group input,.laboratory[data-lesson=magnet] .number-group input{width:44px}.laboratory[data-lesson=lever] .parameter-title label,.laboratory[data-lesson=magnet] .parameter-title label{font-size:11px}.laboratory[data-lesson=lever] .parameter-title i,.laboratory[data-lesson=magnet] .parameter-title i{font-size:15px;padding-left:4px}
+@media(max-height:800px) and (min-width:1001px){.control-panel{padding:15px 16px}.panel-heading{margin-bottom:15px}.panel-heading .overline{display:none}.panel-heading h3{margin-top:0;font-size:14px}.parameter{margin-bottom:16px}.parameter-title{margin-bottom:9px}.number-group input{height:27px;font-size:16px}.range-ticks{font-size:9px;margin-top:5px}.range-ticks span:before{margin-bottom:2px;height:2px}.metrics{padding-top:9px}.formula{font-size:13px;margin-bottom:9px}.metric{margin:7px 0;font-size:10px}.metric strong{font-size:13px}.toggles{margin-top:10px;padding-top:7px}.switch-row{padding:6px 0;font-size:10px}.panel-actions{margin-top:11px;gap:7px}.primary{height:39px;font-size:16px}.secondary{height:27px;font-size:10px}.model-note{display:none}.laboratory[data-lesson=lever] .parameter-title,.laboratory[data-lesson=magnet] .parameter-title{gap:6px}.laboratory[data-lesson=lever] .model-note,.laboratory[data-lesson=magnet] .model-note{display:block;margin-top:12px;line-height:1.8}}
+@media(max-height:800px) and (min-width:1001px){.parameter{margin-bottom:14px}.metric{margin:5px 0}.switch-row{padding:5px 0}.panel-actions{margin-top:9px}}
+@media(max-height:800px) and (min-width:1001px){.control-panel{padding-bottom:3px}}
+.panel-actions [hidden]{display:none}
+.playback-controls[hidden]{display:none}
+.playback-controls{border-bottom:1px solid #304254;padding-bottom:12px;margin-bottom:16px}
+.playback-readout{display:flex;justify-content:space-between;color:#b6cbdf;font:12px Georgia,serif;margin-bottom:10px;font-variant-numeric:tabular-nums}
+.playback-buttons{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.playback-buttons .primary{height:36px;font-size:13px;letter-spacing:1px;border-radius:7px}
+.playback-buttons .secondary{height:36px;font-size:10px;letter-spacing:0}
+.playback-buttons [aria-pressed=true]{color:#f7ce88;border-color:#b78d4b;background:#473822}
+.playback-controls p{font-size:9px;color:#829cb6;margin-top:9px;line-height:1.5}
+.laboratory[data-lesson=conveyor] #parameters{display:grid;grid-template-columns:1fr 1fr;gap:0 15px}
+.laboratory[data-lesson=conveyor] .parameter-title{flex-wrap:wrap;gap:7px}
+.laboratory[data-lesson=conveyor] .parameter-title label{font-size:11px}
+.laboratory[data-lesson=conveyor] .parameter-title i{font-size:14px;padding-left:4px}
+.laboratory[data-lesson=conveyor] .number-group input{width:51px}
+.laboratory[data-lesson=conveyor] .parameter{margin-bottom:15px}
+.laboratory[data-lesson=conveyor] .parameter:last-child{grid-column:1/-1}
+.laboratory[data-lesson=conveyor] .parameter:last-child .parameter-title{flex-direction:row}
+.laboratory[data-lesson=conveyor] .metric:nth-child(2) strong{color:#8bdbbc}
+.laboratory[data-lesson=conveyor] .metric:nth-child(3) strong{color:#77bcf4}
+.laboratory[data-lesson=conveyor] .metric:nth-child(4) strong{color:#bc99f7}
+.laboratory[data-lesson=conveyor] .metric:nth-child(5) strong{color:#fac16b}
+.laboratory[data-lesson=conveyor] .title-row h2{font-size:27px;letter-spacing:2px}
+.laboratory[data-lesson=conveyor] .observation{width:480px}
+@media(min-width:1001px) and (max-width:1450px){.lesson-nav{top:15px}.laboratory[data-lesson=conveyor] .title-row h1{font-size:27px}.laboratory[data-lesson=conveyor] .title-row h2{font-size:25px}}
+@media(min-width:1001px) and (max-height:800px){.laboratory[data-lesson=conveyor] .control-panel{bottom:28px}.laboratory[data-lesson=conveyor] .panel-heading{margin-bottom:10px}.laboratory[data-lesson=conveyor] .parameter{margin-bottom:11px}.laboratory[data-lesson=conveyor] .parameter-title{margin-bottom:8px;gap:5px}.laboratory[data-lesson=conveyor] .range-ticks{display:none}.laboratory[data-lesson=conveyor] .playback-controls{margin-bottom:12px;padding-bottom:10px}.laboratory[data-lesson=conveyor] .toggles{margin-top:6px;padding-top:5px}.laboratory[data-lesson=conveyor] .switch-row{padding:4px 0}.laboratory[data-lesson=conveyor] .metric{margin:5px 0}}
+
+.scene-topline,.object-rail,.control-panel,.preset-bar,.observation,.scene-footer{z-index:2}
+.parameter-toggle{display:none}
+.mobile-playback{display:none}
+.flow-key{color:#a1b7ca;border-left:1px solid #3c536b;padding-left:8px;letter-spacing:0;white-space:nowrap}
+@media(max-width:1000px){
+  .masthead{left:18px;top:18px}.series{font-size:8px;letter-spacing:1px}.title-row{gap:12px;margin-top:8px}.title-row h1{font-size:24px}.title-row h2{font-size:22px}.title-divider{height:24px}.masthead p{font-size:10px;letter-spacing:1px;margin-top:6px}
+  .lesson-nav{top:108px;left:auto;right:14px;width:min(267px,calc(100% - 28px))}
+  .scene-topline{top:161px;left:85px;right:14px;font-size:8px;letter-spacing:0}.object-rail{width:56px;padding:3px;gap:4px}.object-rail button{padding:12px 0;font-size:9px;gap:7px}.object-rail svg{width:26px;height:26px}.object-rail button:not(:last-child):after{width:32px;bottom:-3px}
+  .parameter-toggle{display:block;position:absolute;z-index:8;right:14px;bottom:14px;border:1px solid #527a9f;border-radius:8px;padding:11px 17px;background:#15324a;color:#d4e9ff;font-size:12px;min-height:42px}
+  .control-panel{z-index:7;left:14px;right:14px;top:auto;bottom:76px;width:auto;max-height:min(56dvh,540px);padding:18px;overflow:auto;overscroll-behavior:contain;visibility:hidden;opacity:0;transform:translateY(12px);transition:opacity .18s,transform .18s,visibility .18s;box-shadow:0 12px 40px #0009;background:#0b1726f5}
+  .parameters-open .control-panel{visibility:visible;opacity:1;transform:none}
+  #parameters{display:grid;grid-template-columns:1fr 1fr;gap:0 18px}.parameter{margin-bottom:18px}.parameter-title{flex-direction:column;align-items:flex-start;gap:8px;margin-bottom:12px}.parameter-title label{white-space:nowrap;font-size:12px}.parameter-title i{font-size:17px;padding-left:5px}.number-group input{width:70px}.panel-heading{margin-bottom:20px}
+  .laboratory[data-lesson=lever] .parameter-title label,.laboratory[data-lesson=magnet] .parameter-title label{font-size:12px}.metrics{margin:5px 0}.metric{display:inline-flex;flex-direction:column;align-items:flex-start;width:33%;gap:5px;padding-right:8px}.metric strong{font-size:12px}.metric span{white-space:nowrap}.toggles{display:flex;flex-wrap:wrap;gap:3px 16px}.switch-row{min-width:calc(50% - 8px);gap:10px}.panel-actions{display:flex;flex-direction:row}.primary{width:60%;height:43px;font-size:14px;letter-spacing:1px}.secondary{flex:1;height:43px}.model-note{font-size:9px;line-height:1.8}
+  .preset-bar{gap:6px}.preset-bar #presets{gap:5px}.preset-bar button{font-size:10px;padding:7px 9px}.preset-bar .overline{font-size:8px}
+  .observation{top:auto;bottom:71px;left:14px;right:14px;width:auto;padding:20px 10px 12px;transform:none}.observation h3{font-size:19px;letter-spacing:2px}.observation p{font-size:9px}.observation-tab{font-size:12px;padding:4px 22px}
+  .scene-footer{left:14px;bottom:14px;max-width:calc(100% - 160px);font-size:8px;line-height:1.6}.scene-footer span:first-child{display:none}.scene-footer span:last-child{opacity:.9}
+}
+@media(max-width:1000px) and (max-height:600px){
+  .masthead{top:12px}.series,.masthead p{display:none}.title-row{margin-top:0}.title-row h1{font-size:20px}.title-row h2{font-size:19px}.lesson-nav{top:54px}.scene-topline{top:105px}.object-rail button{padding:7px 0;gap:4px}.object-rail svg{width:21px;height:21px}.observation{bottom:66px;left:85px;right:14px;padding:14px 10px 8px}.observation h3{font-size:16px}.observation p{display:none}.control-panel{max-height:calc(100dvh - 100px)}
+}
+@media(max-width:1000px){.laboratory[data-lesson=conveyor] .title-row{gap:9px}.laboratory[data-lesson=conveyor] .title-row h1{font-size:21px;letter-spacing:1px}.laboratory[data-lesson=conveyor] .title-row h2{font-size:20px;letter-spacing:1px}.laboratory[data-lesson=conveyor] .observation{width:auto}.laboratory[data-lesson=conveyor] .playback-buttons .primary{width:auto}.laboratory[data-lesson=conveyor] .metric{width:33%}.laboratory[data-lesson=conveyor] .observation h3{font-size:17px;letter-spacing:1px}.laboratory[data-lesson=conveyor] .scene-footer{display:none}.mobile-playback:not([hidden]){display:block;position:absolute;left:14px;bottom:14px;z-index:8;min-height:42px;padding:10px 22px;background:linear-gradient(120deg,#d49a44,#f2cd83);color:#30200c;border:1px solid #eac481;border-radius:8px;font-size:13px}.parameters-open .mobile-playback{visibility:hidden}}
+
+
+@media(min-width:800px) and (max-width:1000px) and (max-height:600px){.lesson-nav{top:12px}}
+
+/* Plane mirror uses four teaching modes in the shared left rail. */
+.parameter[hidden],.switch-row[hidden]{display:none}
+.laboratory[data-lesson=mirror] .object-rail button{padding:15px 3px;font-size:11px;gap:9px}
+.laboratory[data-lesson=mirror] .object-rail svg{width:30px;height:30px}
+.laboratory[data-lesson=mirror] .observation{width:510px}
+.laboratory[data-lesson=mirror] .title-row h2{font-size:27px;letter-spacing:2px}
+.laboratory[data-lesson=mirror] .parameter-title label{font-size:12px}
+.laboratory[data-lesson=mirror] .primary{font-size:14px;letter-spacing:1px}
+@media(min-width:1001px) and (max-height:800px){.laboratory[data-lesson=mirror] .control-panel{bottom:28px}.laboratory[data-lesson=mirror] .parameter{margin-bottom:19px}.laboratory[data-lesson=mirror] .range-ticks{display:none}.laboratory[data-lesson=mirror] .observation h3{font-size:22px}}
+@media(max-width:1000px){.laboratory[data-lesson=mirror] .title-row{gap:8px}.laboratory[data-lesson=mirror] .title-row h1{font-size:21px;letter-spacing:1px}.laboratory[data-lesson=mirror] .title-row h2{font-size:20px;letter-spacing:1px}.laboratory[data-lesson=mirror] .object-rail button{font-size:9px;padding:11px 0;gap:5px}.laboratory[data-lesson=mirror] .object-rail svg{width:24px;height:24px}.laboratory[data-lesson=mirror] .observation{width:auto}.laboratory[data-lesson=mirror] .observation h3{font-size:17px;letter-spacing:1px}.laboratory[data-lesson=mirror] .scene-topline{font-size:8px}.laboratory[data-lesson=mirror] .flow-key{display:none}}
+@media(max-width:1000px) and (max-height:600px){.laboratory[data-lesson=mirror] .object-rail button{padding:7px 0;gap:3px}.laboratory[data-lesson=mirror] .object-rail svg{width:20px;height:20px}}
+
+/* Rebuilt batch: clear state selection and compact classroom readouts. */
+@media(min-width:1001px){.preset-bar{padding:10px 12px;background:#0b1827e8;border:1px solid #3e5974;border-radius:10px;gap:8px}.preset-bar .overline{color:#c9d9e9;font-size:10px;letter-spacing:2px}.preset-bar button{font-size:12px;min-height:35px;padding:8px 12px}.preset-bar button.selected{border-color:#edbe69;box-shadow:inset 0 0 0 1px #d5a55355}.laboratory[data-lesson=lens] .control-panel{bottom:28px}.laboratory[data-lesson=lens] .range-ticks{display:none}.laboratory[data-lesson=lens] .parameter{margin-bottom:20px}.laboratory[data-lesson=lens] .model-note{display:none}}
+.laboratory[data-lesson=lens-exam] #parameters{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+.lesson-tools{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap}.lesson-tools[hidden],.lesson-tools button[hidden]{display:none}.lesson-tools button{flex:1;min-width:95px;font-size:10px}
+.laboratory[data-lesson=magnet] .object-rail{width:94px;gap:4px}.laboratory[data-lesson=magnet] .object-rail button{padding:10px 2px;gap:5px}.mode-number{font:18px Georgia,serif;color:#6d9dbe}.selected .mode-number{color:#e8ba72}.laboratory[data-lesson=magnet] .observation{width:510px}.laboratory[data-lesson=magnet] .observation h3{font-size:20px;letter-spacing:1px}.laboratory[data-lesson=magnet] .parameter{margin-bottom:13px}.laboratory[data-lesson=magnet] .parameter-title{margin-bottom:9px}.laboratory[data-lesson=magnet] .model-note{display:none}
+@media(max-width:1000px){.laboratory[data-lesson=magnet] .object-rail{width:63px;}.laboratory[data-lesson=magnet] .object-rail button{font-size:9px;padding:7px 0;gap:3px}.mode-number{font-size:14px}.laboratory[data-lesson=magnet] .observation{width:auto}.laboratory[data-lesson=magnet] .observation h3{font-size:16px}}
+@media(max-width:1000px) and (max-height:600px){.laboratory[data-lesson=magnet] .object-rail{flex-direction:row;flex-wrap:wrap;width:135px}.laboratory[data-lesson=magnet] .object-rail button{width:58px}.laboratory[data-lesson=magnet] .object-rail button:after{display:none}.laboratory[data-lesson=magnet] .observation{left:160px}}
+@media(min-width:1001px) and (max-height:950px){.control-panel{bottom:26px;padding:15px 16px}.panel-heading{margin-bottom:15px}.panel-heading .overline{display:none}.panel-heading h3{margin-top:0;font-size:14px}.parameter{margin-bottom:17px}.parameter-title{margin-bottom:11px}.number-group input{height:27px;font-size:16px}.range-ticks{display:none}.metrics{padding-top:9px}.formula{font-size:12px;margin-bottom:9px}.metric{margin:6px 0;font-size:10px}.metric strong{font-size:13px}.toggles{margin-top:9px;padding-top:7px}.switch-row{padding:5px 0;font-size:10px}.panel-actions{margin-top:10px;gap:7px}.primary{height:39px;font-size:14px}.secondary{height:27px;font-size:10px}.model-note{display:none}.laboratory[data-lesson=conveyor] .parameter{margin-bottom:11px}.laboratory[data-lesson=conveyor] .playback-controls{margin-bottom:12px;padding-bottom:10px}}
+.laboratory[data-lesson=lens-exam] .parameter-title{flex-wrap:wrap;gap:7px}.laboratory[data-lesson=lens-exam] .parameter-title label{font-size:11px}.laboratory[data-lesson=lens-exam] .parameter-title i{font-size:14px;padding-left:4px}.laboratory[data-lesson=lens-exam] .number-group input{width:54px}
+.laboratory[data-lesson=lens-exam] .range-ticks{display:none}.laboratory[data-lesson=lens-exam] .model-note{display:none}.laboratory[data-lesson=lens-exam] .observation{width:510px}.laboratory[data-lesson=lens-exam] .observation h3{font-size:18px;letter-spacing:1px}.laboratory[data-lesson=lens-exam] .title-row h2{font-size:25px;letter-spacing:1px}
+@media(min-width:1001px){.laboratory[data-lesson=lens-exam] .control-panel{bottom:28px}.laboratory[data-lesson=lens-exam] .parameter{margin-bottom:17px}.laboratory[data-lesson=lens] .panel-heading{margin-bottom:16px}.laboratory[data-lesson=lens] .metric{margin:7px 0}.laboratory[data-lesson=lens] .switch-row{padding:5px 0}.laboratory[data-lesson=lens] .parameter{margin-bottom:16px}.laboratory[data-lesson=lens] .panel-actions{margin-top:12px}}
+@media(max-width:1000px){.laboratory[data-lesson=lens-exam] .observation{width:auto}.laboratory[data-lesson=lens-exam] .title-row{gap:8px}.laboratory[data-lesson=lens-exam] .title-row h1{font-size:20px;letter-spacing:1px}.laboratory[data-lesson=lens-exam] .title-row h2{font-size:17px}.laboratory[data-lesson=lens-exam] .observation h3{font-size:16px}}
+
+/* Keep teaching presets directly after the left-hand view controls on every lesson. */
+.left-controls{--controls-top:185px;position:absolute;left:24px;top:var(--controls-top);z-index:2;width:198px;max-height:calc(100dvh - var(--controls-top) - 62px);display:flex;flex-direction:column;align-items:flex-start;gap:14px;overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#49627c transparent}
+.left-controls>*{flex-shrink:0;pointer-events:auto}
+.left-controls .preset-bar{width:176px;padding:10px;background:#0b1827e8;border:1px solid #3e5974;border-radius:10px;gap:8px}
+.left-controls .preset-bar #presets{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+.left-controls .preset-bar button{min-width:0;min-height:34px;padding:7px 3px;line-height:1.5;overflow-wrap:anywhere}
+.left-controls .preset-bar .overline{display:block;color:#c9d9e9;font-size:10px;letter-spacing:2px}
+@media(min-width:1650px){.left-controls{--controls-top:210px}}
+@media(max-height:800px) and (min-width:1001px){.left-controls{--controls-top:166px}.laboratory[data-lesson=mirror] .object-rail button{padding-top:12px;padding-bottom:12px}.laboratory[data-lesson=magnet] .object-rail button{padding-top:6px;padding-bottom:6px}}
+@media(max-width:1000px){
+  .left-controls{--controls-top:203px;left:12px;width:154px;gap:10px;max-height:calc(100dvh - var(--controls-top) - 180px)}
+  .left-controls .preset-bar{width:132px;padding:7px;gap:6px}
+  .left-controls .preset-bar #presets{gap:4px}
+  .left-controls .preset-bar button{font-size:10px;min-height:30px;padding:5px 2px}
+  .left-controls .preset-bar .overline{font-size:9px;letter-spacing:1px}
+}
+@media(max-width:1000px) and (max-height:600px){
+  .left-controls{--controls-top:130px;width:154px;max-height:calc(100dvh - var(--controls-top) - 62px)}
+  .laboratory[data-lesson] .observation{left:170px}
+}
+
+/* A shared text control stays reachable outside the scrollable lesson rail. */
+.quality-toggle{position:absolute;left:24px;bottom:max(8px,env(safe-area-inset-bottom));z-index:8;min-height:38px;padding:8px 10px;border:0;border-radius:5px;background:transparent;color:#c9dbee;font-size:12px;line-height:20px;white-space:nowrap;text-shadow:0 1px 4px #000;cursor:pointer}
+.quality-caption{color:#9eb3ca}.quality-value{text-decoration:underline;text-decoration-style:dotted;text-underline-offset:5px}
+.quality-toggle:hover{color:#f7c575;background:#0b172680}.quality-toggle:focus-visible{outline:2px solid #57b3ff;outline-offset:2px}
+.scene-footer{left:170px;pointer-events:none}
+@media(max-width:1000px){
+  .quality-toggle{left:8px;bottom:max(14px,env(safe-area-inset-bottom));min-height:42px;padding:8px 6px}
+  .scene-footer{display:none}
+  .mobile-playback:not([hidden]){left:50%;transform:translateX(-50%);padding:10px 12px;font-size:12px}
+  .parameter-toggle{padding:11px 12px}
+}
+
+/* Frost the panel backdrop, keeping labels and controls fully opaque. */
+.object-rail,.control-panel,.left-controls .preset-bar,.observation{
+  background:var(--glass-background);border-color:var(--glass-border);
+  -webkit-backdrop-filter:var(--glass-filter);backdrop-filter:var(--glass-filter);
+  box-shadow:var(--glass-shadow);
+}
+.laboratory{--glass-filter:blur(var(--glass-blur)) saturate(110%)}
+.laboratory[data-quality=low]{--glass-blur:8px}
+/* Each panel owns one blur layer; small controls reuse it instead of nesting filters. */
+.preset-bar button{-webkit-backdrop-filter:none;backdrop-filter:none;background:rgba(9,21,35,.34);color:#bed0e3}
+.preset-bar button:hover,.preset-bar button.selected{background:rgba(91,65,29,.48);color:#f9d596}
+.object-rail button{color:#b5c9de}
+.object-rail .selected{background:linear-gradient(160deg,rgba(42,84,116,.58),rgba(14,39,59,.45))}
+.object-rail button:not(:last-child):after{background:rgba(155,187,219,.16)}
+.observation-tab{background:rgba(13,28,45,.78);border-color:var(--glass-border);box-shadow:inset 0 1px 0 rgba(226,241,255,.1)}
+.observation p,.metric{color:#b2c5dc}
+.model-note{color:#9cb2ca}
+.control-panel .number-group input{background:rgba(8,19,32,.64);border-color:rgba(145,179,211,.3)}
+.control-panel .status-chip{background:rgba(9,22,37,.35)}
+.metrics,.toggles,.playback-controls{border-color:rgba(161,192,222,.18)}

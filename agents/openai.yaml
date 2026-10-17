@@ -1,0 +1,4 @@
+interface:
+  display_name: "3D物理交互课件"
+  short_description: "基于知识点资料库批量制作视觉统一、操作一致、物理可验证的三维交互课件"
+  default_prompt: "使用 $physics-3d-courseware 从资料库选择一组知识点，按深色实验室参考风格制作视觉与操作统一的3D交互演示，并逐项验证。"
